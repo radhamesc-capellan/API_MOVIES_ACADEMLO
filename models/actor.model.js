@@ -29,8 +29,9 @@ const Actor = sequelize.define ( 'actors', {
         allowNull: false,
     },
     rating: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 1,
     },
     profilePicUrl: {
         type: DataTypes.STRING(255),
@@ -39,6 +40,7 @@ const Actor = sequelize.define ( 'actors', {
     status: {
         type: DataTypes.STRING(10),
         allowNull: false,
+        defaultValue: 'active'
     },
 });
 

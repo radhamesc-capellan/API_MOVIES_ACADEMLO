@@ -17,12 +17,14 @@ const Movie  = sequelize.define ( 'movies', {
         allowNull: false,
     },
     rating: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 'active'
     },
     duration: {
-        type: DataTypes.STRING(20),
-        allowNull: false
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue:0,
     },
     filmPicUrl: {
         type: DataTypes.STRING(255),
@@ -35,6 +37,7 @@ const Movie  = sequelize.define ( 'movies', {
     status: {
         type: DataTypes.STRING(10),
         allowNull: false,
+        defaultValue: 'active',
     },
 });
 

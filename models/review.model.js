@@ -3,7 +3,7 @@ const { sequelize } = require('../utils/database');
 
 const Review = sequelize.define ( 'reviews', {
     id: {
-        primaryKey: true, 
+        primaryKey: true,
         autoIncrement: true,
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -17,8 +17,9 @@ const Review = sequelize.define ( 'reviews', {
         allowNull: false,
     },
     rating: {
-        type:DataTypes.STRING(100),
+        type:DataTypes.INTEGER,
         allowNull:false,
+        defaultValue: 1,
     },
     userId: {
         type: DataTypes.INTEGER,
@@ -31,6 +32,7 @@ const Review = sequelize.define ( 'reviews', {
     status: {
         type: DataTypes.STRING(10),
         allowNull: false,
+        defaultValue: 'active',
     }
 });
 
