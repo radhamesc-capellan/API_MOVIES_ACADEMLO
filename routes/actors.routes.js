@@ -3,19 +3,20 @@ const express = require('express');
 //Controllers
 
 const {
-    getAllActors,
-    getActorById,
-    createNewActor,
-    updateActor,
-    deleteActor,
-} = require ('../controllers/actors.controller');
+  getAllActors,
+  getActorById,
+  createNewActor,
+  updateActor,
+  deleteActor
+} = require('../controllers/actors.controller');
+
 
 const router = express.Router();
 
-router.get ('/', getAllActors);
-router.get ('/:id', getActorById);
-router.post ('/', createNewActor);
-router.patch ('/:id', updateActor);
-router.delete ('/:id', deleteActor);
+router.get('/', getAllActors);
+router.get('/:id', getActorById);
+router.post('/', createNewActor);
+router.patch('/:id', updateActor);
+router.delete('/:id', deleteActor);
 
-module.exports = { actorsRouter: router};
+module.exports = { actorsRouter: router };
