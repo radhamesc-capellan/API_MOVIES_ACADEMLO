@@ -12,9 +12,6 @@ const initModels = () => {
     Movie.hasMany(Review);
     Review.belongsTo(Movie);
 
-    Movie.belongsToMany(Actor);
-    Actor.belongsToMany(Movie);
-
     Movie.belongsToMany(Actor, { through: ActorInMovie });
     Actor.belongsToMany(Movie, { through: ActorInMovie});
 
